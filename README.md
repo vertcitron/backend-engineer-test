@@ -41,12 +41,12 @@ You will have to compute all of his professional experiences, and output a json 
 		{
 			"id": 241,
 			"name": "React",
-			"durationInMonths": 29
+			"durationInMonths": 28
 		},
 		{
 			"id": 270,
 			"name": "Node.js",
-			"durationInMonths": 29
+			"durationInMonths": 28
 		},
 		{
 			"id": 370,
@@ -56,12 +56,12 @@ You will have to compute all of his professional experiences, and output a json 
 		{
 			"id": 470,
 			"name": "MySQL",
-			"durationInMonths": 15
+			"durationInMonths": 16
 		},
 		{
 			"id": 400,
 			"name": "Java",
-			"durationInMonths": 29
+			"durationInMonths": 30
 		}
 	]
 }
@@ -73,3 +73,10 @@ You will have to compute all of his professional experiences, and output a json 
 2. All professional experiences `startDate` and `endDate` values will be on the first day of the month.
 3. You script will be executed like this : `node exercise.js`
 4. We're using node 8.4 for the execution
+5. You can use any npm package you want
+
+# How to
+
+1. Fork the repo or clone it if you don't have a Github account
+2. Do the exercise
+3. Give us your fork URL or send us an archive file containing your work
