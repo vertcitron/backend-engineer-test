@@ -74,6 +74,7 @@ You will have to compute all of his professional experiences, and output a json 
 3. You script will be executed like this : `node exercise.js`
 4. We're using node 8.4 for the execution
 5. You can use any npm package you want
+6. If there's an error in the json file, exit without printing anything
 
 # How to
 
