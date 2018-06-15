@@ -14,19 +14,23 @@ You can find an example of a mission and of a freelancer data model in the `/exa
 
 In our matching algorithm, we use the total months of experience of each skill for each freelancer.
 
-If you look at the example, you will see that the freelancer has 3 professional experiences, you can see that he has been doing Javascript since his first professional experience, in may 2013 and kept doing Javascript until his last professional experience in may 2018.
+If you look at the example `example/freelancer.json`, you will see that the freelancer has 3 professional experiences, you can see that he has been doing Javascript since his first professional experience, in may 2013 and kept doing Javascript until his last professional experience in may 2018.
 
 We would like to compute the total number of months the freelancer has worked with each skill.
 
 In this case, we would have :
 
-React: 29 months
-Node.js: 29 months
-Javascript 29 months + 15 months + 14 months = 58 months
-MySQL: 15 months
-Java: 15 months + 14 months = 29 months
+React: **29 months**
 
-You will have to read a json file `exercise/freelancer.json`, with the same structure as the example `freelancer.json`.
+Node.js: **29 months**
+
+Javascript 29 months + 15 months + 14 months = **58 months**
+
+MySQL: **15 months**
+
+Java: 15 months + 14 months = **29 months**
+
+You will have to read a json file `exercise/freelancer.json`, with the same structure as the example `example/freelancer.json`.
 
 You will have to compute all of his professional experiences, and output a json with this exact structure :
 
@@ -65,5 +69,7 @@ You will have to compute all of his professional experiences, and output a json 
 
 # Rules
 
-1. Overlapping months of experience with the same skill(s) should not be counted twice, see [months-overlap.png](./assets/months-overlap.png)
+1. Overlapping months of experience with the same skill(s) should not be counted twice, see [assets/months-overlap.png](./assets/months-overlap.png)
 2. All professional experiences `startDate` and `endDate` values will be on the first day of the month.
+3. You script will be executed like this : `node exercise.js`
+4. We're using node 8.4 for the execution
