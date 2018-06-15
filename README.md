@@ -24,7 +24,7 @@ React: **29 months**
 
 Node.js: **29 months**
 
-Javascript 29 months + 15 months + 14 months = **58 months**
+Javascript: 29 months + 15 months + 14 months = **58 months**
 
 MySQL: **15 months**
 
