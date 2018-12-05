@@ -18,8 +18,8 @@ const jobs = freelancer.professionalExperiences
 const skills = new Skills()
 for (job of jobs) {
 	for (skill of job.skills) {
-		skills.addExperience(skill, Date(job.startDate), Date(job.endDate))
+		skills.addExperience(skill, new Date(job.startDate), new Date(job.endDate))
 	}
 }
 
-console.log(skills)
+console.log(skills.toJson())

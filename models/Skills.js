@@ -2,6 +2,28 @@
 *                   OBJECT MODEL FOR THE SKILLS LIST
 *******************************************************************************/
 
+const moment = require('moment')
+const month = 2628000000
+
+/** This function computes the overall time from a experiences list */
+function computeTime (experiences) {
+  // builds an experience list with non overlapping periods, by forcing end
+  // times to the start time of the overlapping xp.
+  const nonOverlap = []
+  for (a of experiences) {
+    for (b of experiences) {
+      if (b.start > a.start && b.start < a.end) b.start = a.end
+    }
+    nonOverlap.push(a)
+  }
+  // then adds all the experiences durations
+  let overall = 0
+  for (xp of nonOverlap) {
+    overall += moment.duration(xp.end - xp.start).asMonths()
+  }
+  return Math.round(overall)
+}
+
 exports.Skills = class Skills extends Array {
   constructor () {
     super()
@@ -34,5 +56,15 @@ exports.Skills = class Skills extends Array {
     } else {
       this[idx].experiences.push({ start, end })
     }
+  }
+
+  toJson () {
+    return JSON.stringify(this.map(skill => {
+      return {
+        id: skill.id,
+        name: skill.name,
+        durationInMonths: computeTime(skill.experiences)
+      }
+    }))
   }
 }
