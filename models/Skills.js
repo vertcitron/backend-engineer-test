@@ -3,7 +3,6 @@
 *******************************************************************************/
 
 const moment = require('moment')
-const month = 2628000000
 
 /** This function computes the overall time from a experiences list */
 function computeTime (experiences) {
@@ -24,6 +23,7 @@ function computeTime (experiences) {
   return Math.round(overall)
 }
 
+/** This is the SKILLS class */
 exports.Skills = class Skills extends Array {
   constructor () {
     super()
@@ -45,7 +45,6 @@ exports.Skills = class Skills extends Array {
    *   start and end are Date objects
    */
   addExperience (skill, start, end) {
-    let skillEntry = {}
     let idx = this.indexOf(skill)
     if (idx === -1) {
       this.push({

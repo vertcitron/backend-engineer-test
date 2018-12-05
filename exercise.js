@@ -18,7 +18,11 @@ const jobs = freelancer.professionalExperiences
 const skills = new Skills()
 for (job of jobs) {
 	for (skill of job.skills) {
-		skills.addExperience(skill, new Date(job.startDate), new Date(job.endDate))
+		let start = new Date(job.startDate)
+		let end = new Date(job.endDate)
+		start.setDate(1)
+		end.setDate(1)
+		skills.addExperience(skill, start, end)
 	}
 }
 

@@ -6,7 +6,7 @@
     "moment": "^2.22.2"
   },
   "engines": {
-    "node": "8.4.0"
+    "node": ">8.4.0"
   },
   "author": "comet team",
   "license": "MIT",
